@@ -1,0 +1,15 @@
+<head>
+</head>
+<body>
+    <form action="/add-user", method="POST">
+        <h4>username</h4>
+        <input name="username">
+        <h4>password</h4>
+        <input name="password">
+        <button value="submit" type="submit">Add user</button>
+    </form>
+    <h4>currently registered users:</h4>
+    {%for user in users_to_render%}
+        <h3>{{user.username}}</h3>
+    {%endfor%}
+</body>
